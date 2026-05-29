@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="猫咪志愿者图片占位素材">
+  <rect width="1200" height="900" fill="#FBE6D8"/>
+  <circle cx="252" cy="237" r="106" fill="#F7A23B"/>
+  <circle cx="604" cy="229" r="126" fill="#FFF8EE"/>
+  <circle cx="956" cy="245" r="106" fill="#FAD8A7"/>
+  <path d="M160 704c14-121 102-206 205-206s191 85 205 206z" fill="#FFF8EE"/>
+  <path d="M662 704c14-121 102-206 205-206s191 85 205 206z" fill="#FFF8EE"/>
+  <path d="M423 704c17-145 123-247 247-247s230 102 247 247z" fill="#FFFFFF"/>
+  <path d="M532 476l42-84 58 72M806 476l-42-84-58 72" fill="#fff" stroke="#4B2D22" stroke-width="17" stroke-linejoin="round"/>
+  <circle cx="617" cy="594" r="17" fill="#4B2D22"/>
+  <circle cx="723" cy="594" r="17" fill="#4B2D22"/>
+  <path d="M660 629h22l-11 15z" fill="#B65B2A"/>
+  <path d="M92 154h1016v77H92z" fill="#4B2D22"/>
+  <text x="124" y="207" fill="#FFF8EE" font-family="Arial, sans-serif" font-size="44" font-weight="800">Volunteer Team</text>
+  <text x="124" y="807" fill="#4B2D22" font-family="Arial, sans-serif" font-size="54" font-weight="800">志愿协作，让救助更可靠</text>
+</svg>

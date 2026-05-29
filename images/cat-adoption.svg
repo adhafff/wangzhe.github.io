@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="猫咪领养图片占位素材">
+  <rect width="1200" height="900" fill="#FFF8EE"/>
+  <rect x="92" y="110" width="1016" height="660" rx="42" fill="#FBE6D8"/>
+  <path d="M215 508c0-112 91-203 203-203s203 91 203 203v119H215z" fill="#FFFFFF"/>
+  <path d="M280 330l46-95 63 82M555 330l-46-95-63 82" fill="#fff" stroke="#4B2D22" stroke-width="18" stroke-linejoin="round"/>
+  <circle cx="357" cy="465" r="18" fill="#4B2D22"/>
+  <circle cx="479" cy="465" r="18" fill="#4B2D22"/>
+  <path d="M407 503h25l-13 16z" fill="#B65B2A"/>
+  <path d="M700 330c52-67 153-43 165 39 15-82 117-106 166-38 55 76-14 169-166 273-151-104-220-198-165-274z" fill="#F7A23B"/>
+  <text x="684" y="678" fill="#4B2D22" font-family="Arial, sans-serif" font-size="58" font-weight="800">Adopt Me</text>
+  <text x="689" y="730" fill="#B65B2A" font-family="Arial, sans-serif" font-size="32" font-weight="700">领养 / 陪伴 / 回访</text>
+</svg>

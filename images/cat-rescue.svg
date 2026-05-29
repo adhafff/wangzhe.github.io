@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="猫咪救助图片占位素材">
+  <rect width="1200" height="900" fill="#FFF1DC"/>
+  <circle cx="1020" cy="110" r="120" fill="#FAD8A7"/>
+  <path d="M0 690c170-130 315-130 435 0s255 132 405 0 270-128 360 0v210H0z" fill="#F7A23B"/>
+  <path d="M264 574c0-126 94-229 210-229s210 103 210 229v89H264z" fill="#fff"/>
+  <path d="M330 372l55-108 69 95M594 372l-55-108-69 95" fill="#fff" stroke="#4B2D22" stroke-width="20" stroke-linejoin="round"/>
+  <circle cx="407" cy="508" r="20" fill="#4B2D22"/>
+  <circle cx="543" cy="508" r="20" fill="#4B2D22"/>
+  <path d="M462 548h28l-14 17z" fill="#B65B2A"/>
+  <path d="M432 598c28 24 61 24 89 0" fill="none" stroke="#4B2D22" stroke-width="12" stroke-linecap="round"/>
+  <path d="M710 515h210c42 0 76 34 76 76v126H710z" fill="#FBE6D8" stroke="#4B2D22" stroke-width="16"/>
+  <path d="M754 515v-44c0-56 45-101 101-101s101 45 101 101v44" fill="none" stroke="#4B2D22" stroke-width="16"/>
+  <text x="80" y="145" fill="#4B2D22" font-family="Arial, sans-serif" font-size="64" font-weight="800">Rescue Care</text>
+  <text x="84" y="202" fill="#B65B2A" font-family="Arial, sans-serif" font-size="34" font-weight="700">救助 / 医疗 / 康复</text>
+</svg>

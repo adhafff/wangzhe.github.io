@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="猫咪捐赠图片占位素材">
+  <rect width="1200" height="900" fill="#FFF1DC"/>
+  <rect x="160" y="185" width="880" height="540" rx="40" fill="#FFFFFF" stroke="#4B2D22" stroke-width="18"/>
+  <path d="M300 579c0-98 80-178 178-178s178 80 178 178v78H300z" fill="#FBE6D8"/>
+  <path d="M350 423l43-86 58 74M607 423l-43-86-58 74" fill="#FBE6D8" stroke="#4B2D22" stroke-width="16" stroke-linejoin="round"/>
+  <circle cx="429" cy="524" r="16" fill="#4B2D22"/>
+  <circle cx="532" cy="524" r="16" fill="#4B2D22"/>
+  <path d="M470 556h22l-11 14z" fill="#B65B2A"/>
+  <circle cx="800" cy="474" r="95" fill="#F7A23B"/>
+  <path d="M800 417v114M744 474h112" stroke="#4B2D22" stroke-width="24" stroke-linecap="round"/>
+  <text x="250" y="296" fill="#4B2D22" font-family="Arial, sans-serif" font-size="62" font-weight="800">Donation</text>
+  <text x="250" y="354" fill="#B65B2A" font-family="Arial, sans-serif" font-size="34" font-weight="700">捐赠 / 物资 / 透明账单</text>
+</svg>

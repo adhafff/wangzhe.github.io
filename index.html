@@ -1,0 +1,661 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鏆栫埅璁″垝 | 鍏崇埍鐚挭鍏泭缃戠珯</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, "Microsoft YaHei", sans-serif;
+        background: #fff8ee;
+        color: #4b2d22;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(247, 162, 59, 0.24);
+        background: rgba(255, 248, 238, 0.96);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 16px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #f7a23b;
+        color: white;
+      }
+
+      .brand small {
+        display: block;
+        margin-top: 2px;
+        color: #b65b2a;
+        font-size: 12px;
+      }
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+
+      .links a,
+      .button {
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .links a:hover {
+        background: #fad8a7;
+      }
+
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        border: 0;
+        background: #4b2d22;
+        color: white;
+        box-shadow: 0 16px 38px rgba(130, 74, 31, 0.14);
+      }
+
+      .button.orange {
+        background: #f7a23b;
+        color: #4b2d22;
+      }
+
+      .button.light {
+        border: 1px solid rgba(75, 45, 34, 0.18);
+        background: white;
+        color: #4b2d22;
+      }
+
+      .hero,
+      .section {
+        padding: 72px 22px;
+      }
+
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.04fr 0.96fr;
+        gap: 42px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: #b65b2a;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 22px;
+        font-size: clamp(38px, 6vw, 68px);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 14px;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.16;
+      }
+
+      h3 {
+        margin-bottom: 12px;
+        font-size: 21px;
+      }
+
+      .lead {
+        max-width: 680px;
+        color: rgba(75, 45, 34, 0.74);
+        font-size: 18px;
+        line-height: 1.8;
+      }
+
+      .actions {
+        margin-top: 30px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .media {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 18px 45px rgba(130, 74, 31, 0.16);
+      }
+
+      .stats {
+        background: white;
+        padding: 28px 22px;
+      }
+
+      .stats-grid,
+      .card-grid,
+      .four-grid,
+      .contact-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .stat,
+      .card,
+      .step,
+      .contact-panel,
+      form {
+        border-radius: 8px;
+        box-shadow: 0 18px 45px rgba(130, 74, 31, 0.12);
+      }
+
+      .stat {
+        border: 1px solid #ffe1bd;
+        background: #fff8ee;
+        padding: 24px;
+      }
+
+      .stat strong {
+        display: block;
+        color: #b65b2a;
+        font-size: 38px;
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 10px;
+        color: rgba(75, 45, 34, 0.72);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .blush {
+        background: #fbe6d8;
+      }
+
+      .white {
+        background: white;
+      }
+
+      .cream {
+        background: #fff8ee;
+      }
+
+      .section-head {
+        max-width: 760px;
+        margin-bottom: 34px;
+      }
+
+      .section-head p,
+      .card p,
+      .step p,
+      .contact-panel p {
+        color: rgba(75, 45, 34, 0.72);
+        line-height: 1.75;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .four-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid #ffe1bd;
+        background: white;
+      }
+
+      .card-body {
+        padding: 24px;
+      }
+
+      .tag {
+        display: inline-flex;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: #fad8a7;
+        padding: 6px 10px;
+        color: #b65b2a;
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .step {
+        background: white;
+        padding: 24px;
+      }
+
+      .step b {
+        display: block;
+        margin-bottom: 12px;
+        color: #b65b2a;
+      }
+
+      .contact-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      .contact-panel {
+        background: #fbe6d8;
+        padding: 30px;
+      }
+
+      form {
+        border: 1px solid #ffe1bd;
+        background: white;
+        padding: 30px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 18px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid #ffe1bd;
+        border-radius: 8px;
+        padding: 13px 14px;
+        color: #4b2d22;
+        font: inherit;
+      }
+
+      textarea {
+        min-height: 130px;
+        resize: vertical;
+      }
+
+      footer {
+        background: #4b2d22;
+        color: #fff8ee;
+        padding: 42px 22px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 28px;
+      }
+
+      footer p,
+      footer a,
+      footer span {
+        color: rgba(255, 248, 238, 0.78);
+        line-height: 1.7;
+      }
+
+      footer strong {
+        color: #fff8ee;
+      }
+
+      @media (max-width: 880px) {
+        .nav-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .links {
+          overflow-x: auto;
+          width: 100%;
+          flex-wrap: nowrap;
+          padding-bottom: 2px;
+        }
+
+        .links a {
+          flex: 0 0 auto;
+        }
+
+        .hero-grid,
+        .contact-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats-grid,
+        .card-grid,
+        .four-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .hero,
+        .section {
+          padding: 52px 18px;
+        }
+
+        .stats-grid,
+        .card-grid,
+        .four-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .actions .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a href="#home" class="brand">
+          <span class="brand-mark">鍠?/span>
+          <span>鏆栫埅璁″垝<small>Cat Care Charity</small></span>
+        </a>
+        <nav class="links" aria-label="涓诲鑸?>
+          <a href="#home">棣栭〉</a>
+          <a href="#adopt">棰嗗吇</a>
+          <a href="#stories">鏁戝姪鏁呬簨</a>
+          <a href="#volunteer">蹇楁効鑰?/a>
+          <a href="#donate">鎹愯禒</a>
+          <a href="#contact">鑱旂郴鎴戜滑</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Cat Rescue Charity</p>
+            <h1>缁欐瘡涓€鍙瓑寰呯殑鐚挭锛屼竴涓彲浠ュ畨蹇冩墦鐩圭殑瀹?/h1>
+            <p class="lead">
+              鏆栫埅璁″垝涓撴敞鍩庡競娴佹氮鐚晳鍔┿€佸尰鐤椼€佺粷鑲层€侀鍏讳笌绀惧尯绉戞櫘锛岀敤閫忔槑鍗忎綔鎶婂杽鎰忛€佸埌鐪熸闇€瑕佺殑灏忕敓鍛借韩杈广€?            </p>
+            <div class="actions">
+              <a class="button orange" href="#adopt">鏌ョ湅寰呴鍏荤尗鍜?/a>
+              <a class="button light" href="#volunteer">鍔犲叆蹇楁効鑰?/a>
+            </div>
+          </div>
+          <img class="media" src="images/cat-rescue.svg" alt="鐚挭鏁戝姪鍥剧墖鍗犱綅绱犳潗" />
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="wrap stats-grid">
+          <div class="stat"><strong>312</strong><span>宸叉晳鍔╃尗鍜?/span></div>
+          <div class="stat"><strong>126</strong><span>瀹屾垚棰嗗吇</span></div>
+          <div class="stat"><strong>84</strong><span>娲昏穬蹇楁効鑰?/span></div>
+          <div class="stat"><strong>18</strong><span>鍚堜綔鍖婚櫌</span></div>
+        </div>
+      </section>
+
+      <section class="section blush">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>鎴戜滑姝ｅ湪鍋氱殑浜?/h2>
+            <p>浠庤澶村彂鐜板埌瀹跺涵閫傚簲锛屾瘡涓€姝ラ兘灏介噺琚褰曘€佽璺熻繘锛屼篃琚俯鏌斿寰呫€?/p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img src="images/cat-rescue.svg" alt="鐚挭鏁戝姪鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">Rescue</span>
+                <h3>绱ф€ユ晳鍔?/h3>
+                <p>涓哄彈浼ゃ€佸辜鐚€佸瓡鐚拰楂樺嵄鍖哄煙鐚挭鎻愪緵鎹曟崏杞繍銆佸尰闄㈡鏌ャ€佹不鐤楀拰搴峰瀹夌疆銆?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-adoption.svg" alt="鐚挭棰嗗吇鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">Adoption</span>
+                <h3>璐熻矗棰嗗吇</h3>
+                <p>閫氳繃瀹惰銆佸洖璁垮拰棰嗗吇鍗忚锛屽府鍔╃尗鍜尮閰嶇ǔ瀹氬搴紝涔熼櫔浼存柊鎵嬮鍏讳汉瀹屾垚閫傚簲鏈熴€?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-volunteer.svg" alt="鐚挭蹇楁効鑰呭浘鐗囧崰浣嶇礌鏉? />
+              <div class="card-body">
+                <span class="tag">Community</span>
+                <h3>绀惧尯鍏卞缓</h3>
+                <p>缁勭粐瀹氱偣鎶曞杺銆乀NR缁濊偛銆佸叕鐩婂競闆嗗拰鏍″洯璁插骇锛岃鏇村浜虹敤姝ｇ‘鏂瑰紡鍏冲績鐚挭銆?/p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="adopt" class="section white">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Adoption</p>
+            <h2>棰嗗吇涓嶆槸甯﹁蛋涓€鍙尗锛屾槸鎺ヤ綇涓€娈电敓鍛?/h2>
+            <p>鎴戜滑涓烘瘡鍙尗鍜缓绔嬪熀纭€鍋ュ悍妗ｆ锛屽崗鍔╅鍏诲搴簡瑙ｆ€ф牸銆侀ギ椋熴€佸尰鐤椾笌閫傚簲鏈熸敞鎰忎簨椤广€?/p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img src="images/cat-adoption.svg" alt="鐚挭棰嗗吇鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">寮€鏀鹃鍏?/span>
+                <h3>姗樺瓙 | 2宀?| 浜蹭汉</h3>
+                <p>宸茬粷鑲插厤鐤紝鍠滄琚懜涓嬪反锛岄€傚悎鏈夌ǔ瀹氫綔鎭殑瀹跺涵銆?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-adoption.svg" alt="鐚挭棰嗗吇鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">寮€鏀鹃鍏?/span>
+                <h3>璞嗗寘 | 8涓湀 | 娲绘臣</h3>
+                <p>鏁戝姪浜庨洦澶╁仠杞﹀満锛屾仮澶嶈壇濂斤紝闇€瑕佹湁鑰愬績鐨勯櫔浼淬€?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-adoption.svg" alt="鐚挭棰嗗吇鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">寮€鏀鹃鍏?/span>
+                <h3>灏忔ⅷ | 3宀?| 瀹夐潤</h3>
+                <p>鑳嗗瓙绋嶅皬锛屼絾鐔熸倝鍚庝細涓诲姩闈犺繎锛岄€傚悎瀹夐潤灞呬綇鐜銆?/p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section cream">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Rescue Stories</p>
+            <h2>姣忎竴娆℃晳鍔╋紝閮芥湁涓€娈甸噸鏂板紑濮嬬殑鏁呬簨</h2>
+            <p>杩欓噷璁板綍鐚挭琚彂鐜般€佹不鐤椼€佸悍澶嶃€侀鍏绘垨鍥炲綊绀惧尯鐨勮繃绋嬶紝涔熻褰曟櫘閫氫汉濡備綍涓€璧峰畬鎴愭敼鍙樸€?/p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img src="images/cat-rescue.svg" alt="鐚挭鏁戝姪鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">鏁戝姪璁板綍</span>
+                <h3>浠庢ˉ娲炲埌绐楀彴锛氬ザ鐗涚殑搴峰鏃ヨ</h3>
+                <p>蹇楁効鑰呰繛缁笁鏅氳鎹曪紝瀹屾垚浼ゅ彛娌荤枟鍜岃惀鍏绘仮澶嶅悗锛屽ザ鐗涚粓浜庣瓑鍒版効鎰忔參鎱㈤櫔瀹冪殑浜恒€?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-rescue.svg" alt="鐚挭鏁戝姪鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">鏁戝姪璁板綍</span>
+                <h3>灏忔弧鐨勬槬澶?/h3>
+                <p>涓€鍙€€瀛曟瘝鐚瀹夌疆鍒颁复鏃跺搴紝骞肩尗鏂ザ鍚庨檰缁壘鍒版柊瀹讹紝灏忔弧涔熷畬鎴愮粷鑲插洖璁裤€?/p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/cat-rescue.svg" alt="鐚挭鏁戝姪鍥剧墖鍗犱綅绱犳潗" />
+              <div class="card-body">
+                <span class="tag">鏁戝姪璁板綍</span>
+                <h3>鑰佽鍖虹殑TNR琛屽姩</h3>
+                <p>鎴戜滑鍜岀ぞ鍖哄眳姘戝崗浣滐紝瀹屾垚涓€鎵规祦娴尗缁濊偛銆佸缓妗ｅ拰瀹氱偣鎶曞杺锛屽噺灏戞棤搴忕箒娈栥€?/p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="volunteer" class="section blush">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Volunteer</p>
+            <h2>鎶婁竴鐐圭偣绌洪棽鏃堕棿锛屽彉鎴愮尗鍜鐪嬭鐨勬満浼?/h2>
+            <p>鏃犺浣犺兘鎻愪緵浜ら€氥€佹憚褰便€佸瘎鍏汇€佽璁°€佹枃妗堣繕鏄幇鍦哄崗鍔╋紝閮借兘鎴愪负鏁戝姪閾炬潯閲岄噸瑕佺殑涓€鐜€?/p>
+          </div>
+          <div class="four-grid">
+            <div class="step"><b>01</b><h3>鏁戝姪鍗忎綔</h3><p>鍗忓姪鐜板満瑙傚療銆佽鎹曘€佽浆杩愬拰鍖婚櫌娌熼€氥€?/p></div>
+            <div class="step"><b>02</b><h3>涓存椂瀵勫吇</h3><p>涓哄悍澶嶆湡鐚挭鎻愪緵鐭湡瀹夊叏绌洪棿銆?/p></div>
+            <div class="step"><b>03</b><h3>鍐呭璁板綍</h3><p>鎷嶆憚鐓х墖銆佹暣鐞嗘晠浜嬨€佺淮鎶ら鍏昏祫鏂欍€?/p></div>
+            <div class="step"><b>04</b><h3>娲诲姩鏀寔</h3><p>鍙備笌鍏泭甯傞泦銆佺鏅搴у拰鐗╄祫鏁寸悊銆?/p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="donate" class="section white">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Donation</p>
+            <h2>浣犵殑姣忎竴浠芥敮鎸侊紝閮戒細鍙樻垚鍏蜂綋鐨勯鐗┿€佽嵂鍝佸拰搴囨姢</h2>
+            <p class="lead">鎴戜滑寤鸿灏忛闀挎湡鎹愯禒锛屼篃娆㈣繋鐗╄祫銆佸尰鐤楄祫婧愩€佸満鍦板拰浼佷笟鍏泭鍚堜綔銆?/p>
+            <div class="actions">
+              <a class="button orange" href="#contact">鑱旂郴鎹愯禒</a>
+            </div>
+          </div>
+          <img class="media" src="images/cat-donation.svg" alt="鐚挭鎹愯禒鍥剧墖鍗犱綅绱犳潗" />
+        </div>
+      </section>
+
+      <section class="section cream">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>鎹愯禒鐢ㄩ€?/h2>
+            <p>椤甸潰涓殑閲戦涓庨」鐩负灞曠ず妯℃澘锛屽彲鎸夊疄闄呭叕鐩婅储鍔″埗搴︽浛鎹€?/p>
+          </div>
+          <div class="four-grid">
+            <div class="step"><h3>鍖荤枟鏁戝姪</h3><p>澶栦激娌荤枟銆佷紶鏌撶梾绛涙煡銆侀┍铏厤鐤拰浣忛櫌鎶ょ悊銆?/p></div>
+            <div class="step"><h3>缁濊偛璁″垝</h3><p>鏀寔TNR椤圭洰锛屽噺灏戞祦娴尗鏃犲簭绻佹畺鍜岀敓瀛樺帇鍔涖€?/p></div>
+            <div class="step"><h3>鍙ｇ伯鐗╄祫</h3><p>鐚伯銆佺綈澶淬€佺尗鐮傘€佷繚娓╃敤鍝佸拰璇辨崟绗肩淮鎶ゃ€?/p></div>
+            <div class="step"><h3>棰嗗吇鏀寔</h3><p>鍒朵綔璧勬枡銆佸洖璁夸氦閫氥€佸瘎鍏昏ˉ璐村拰绉戞櫘娲诲姩銆?/p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section white">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>鎯抽鍏汇€佹眰鍔┿€佸悎浣滄垨鍔犲叆鎴戜滑锛岄兘鍙互浠庤繖閲屽紑濮?/h2>
+            <p>璇峰敖閲忔彁渚涚尗鍜綅缃€佺収鐗囥€佸仴搴风姸鎬佸拰浣犵殑鑱旂郴鏂瑰紡銆傜揣鎬ュ尰鐤楁儏鍐靛缓璁悓姝ヨ仈绯婚檮杩戝疇鐗╁尰闄€?/p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-panel">
+              <h3>鍏泭鑱旂粶</h3>
+              <p>閭锛歨ello@warm-paws.org</p>
+              <p>寰俊锛歐armPaws-Care</p>
+              <p>寮€鏀炬椂闂达細鍛ㄤ竴鑷冲懆鏃?09:00-20:00</p>
+              <p>鍚堜綔鏂瑰悜锛氭晳鍔╁尰闄€侀鍏诲搴€佸搧鐗屽叕鐩娿€佹牎鍥ぞ鍥€佺ぞ鍖篢NR銆?/p>
+            </div>
+            <form>
+              <label>濮撳悕<input placeholder="璇疯緭鍏ュ鍚? /></label>
+              <label>鑱旂郴鏂瑰紡<input placeholder="鎵嬫満 / 閭 / 寰俊" /></label>
+              <label>
+                鍜ㄨ绫诲瀷
+                <select>
+                  <option>棰嗗吇鍜ㄨ</option>
+                  <option>鏁戝姪姹傚姪</option>
+                  <option>蹇楁効鑰呮姤鍚?/option>
+                  <option>鎹愯禒鍚堜綔</option>
+                </select>
+              </label>
+              <label>璇︾粏璇存槑<textarea placeholder="璇锋弿杩颁綘鎯冲挩璇㈢殑鍐呭"></textarea></label>
+              <button class="button orange" type="button">鎻愪氦淇℃伅</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <strong>鏆栫埅璁″垝</strong>
+          <p>鎴戜滑杩炴帴鏁戝姪浜恒€侀鍏诲搴€佸織鎰胯€呬笌鎹愯禒鑰咃紝涓哄煄甯傞噷鐨勬祦娴尗鎻愪緵鍖荤枟銆侀鐗┿€佺粷鑲层€佸畨缃笌闀挎湡鍏虫€€銆?/p>
+        </div>
+        <div>
+          <strong>鍙備笌鏂瑰紡</strong>
+          <p><a href="#adopt">鐢宠棰嗗吇</a></p>
+          <p><a href="#volunteer">鎴愪负蹇楁効鑰?/a></p>
+          <p><a href="#donate">鍏泭鎹愯禒</a></p>
+        </div>
+        <div>
+          <strong>鑱旂郴鏂瑰紡</strong>
+          <p>hello@warm-paws.org</p>
+          <p>鍛ㄤ竴鑷冲懆鏃?09:00-20:00</p>
+          <p>涓婃捣銆佹澀宸炪€佽嫃宸?/p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
